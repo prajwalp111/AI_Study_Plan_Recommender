@@ -1,15 +1,13 @@
-# Study Plan Recommender – Week 1
+# AI Study Planner – Full Project (All 4 Phases)
 
-## Features Implemented
+## Features
 
-- Collect user inputs using Streamlit
-- Validate input: subject list, study hours, and target date
-- Display collected preferences cleanly
+1. Collect user input
+2. Generate schedule using Pandas
+3. Optimize for weak subjects
+4. Export to Excel
 
 ## How to Run
 
-1. Install dependencies:
-   pip install streamlit pandas numpy
-
-2. Run the app:
-   streamlit run main.py
+1. pip install -r requirements.txt
+2. streamlit run main.py
