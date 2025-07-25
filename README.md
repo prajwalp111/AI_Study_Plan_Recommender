@@ -1,87 +1,106 @@
-Here’s the complete content for your README.md file. You can copy it into a file named README.md and include it in your project folder:
+# 📚 AI-Powered Study Plan Recommender
+
+An intelligent and customizable study planner built using **Streamlit**, designed to help you optimize your daily study schedule with support for weak subjects, preferred days off, and automatic break scheduling.
 
 ---
 
-# 🧠 AI Study Plan Recommender – Digital Blinc Internship Project
-
-This project is a Personalized Study Plan Generator built using Python and Streamlit. It creates optimized daily study schedules for students based on their goals, available hours, and subject preferences.
-
 ## 🚀 Features
 
-* Collects user input: subjects, total days, hours per day, weak/priority subjects
-* Distributes study time intelligently using weighted logic
-* Dynamically generates a weekly/monthly plan
-* Visualizes the schedule in tables
-* Allows exporting the plan as an Excel file
-* Streamlit-based user interface for easy interaction
+- ✍️ Input any number of subjects
+- ⏰ Customize study hours per day
+- 📅 Set your target completion date
+- 🧠 Prioritize weak subjects (they get **1 extra hour per day**)
+- 💤 Auto-insert breaks (with adjustable count and duration)
+- 🚫 Select preferred days off
+- ⚙️ AI optimization for smarter scheduling
+- 📥 Export your final plan as an Excel file
 
-## 🛠️ Tech Stack
+---
 
-* Python 3.8+
-* Streamlit
-* Pandas
-* NumPy
-* OpenPyXL (for Excel export)
-
-## 🧩 Folder Structure
+## 🗂️ Project Structure
 
 ```
-📁 study_plan_app/
-├── main.py
+AI_Study_Plan_Recommender/
+├── main.py                # Streamlit UI and app logic
 ├── logic/
-│   ├── input_processing.py
-│   ├── scheduler.py
-│   └── exporter.py
-├── assets/
-│   └── style.css (optional)
-├── README.md
-└── requirements.txt
+│   ├── scheduler.py       # Creates study schedule with breaks
+│   ├── optimizer.py       # Optimizes schedule (weak subjects earlier)
+│   ├── input_processing.py # Validates user inputs
+│   └── exporter.py        # Exports schedule as Excel
+├── requirements.txt       # Dependencies
+└── README.md              # Project documentation (this file)
 ```
 
-## 📦 Installation
+---
 
-1. Clone the repository or extract the zip:
+## 🛠️ Installation & Setup
 
-   ```bash
-   git clone https://github.com/yourusername/study-plan-ai.git
-   cd study-plan-ai
-   ```
+1. **Clone the repository**
 
-2. Create and activate a virtual environment (optional but recommended):
+```bash
+git clone https://github.com/your-username/AI_Study_Plan_Recommender.git
+cd AI_Study_Plan_Recommender
+```
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+2. **Create a virtual environment (optional but recommended)**
 
-3. Install required libraries:
+```bash
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+3. **Install dependencies**
 
-## ▶️ Run the App
+```bash
+pip install -r requirements.txt
+```
 
-Launch the Streamlit application:
+> 🔁 If Excel export fails, also run:
+```bash
+pip install XlsxWriter
+```
+
+---
+
+## 🧪 Usage
+
+Run the Streamlit app:
 
 ```bash
 streamlit run main.py
 ```
 
-The app will open in your default browser. Input your subjects, goal duration, hours per day, and weak areas to get your personalized plan.
+---
 
-## 📤 Export Option
+## 📤 Export Format
 
-Click the "Export to Excel" button at the bottom of the app to download your study schedule.
+Exports your final plan as `study_plan.xlsx` using the format:
 
-## 🧪 Certification Notes
+| Day     | Date       | Time       | Subject |
+|---------|------------|------------|---------|
+| Monday  | 2025-07-28 | 09:00–10:00| Math    |
+|         |            | 10:00–10:15| Break   |
+|         |            | 10:15–11:15| Physics |
+| ...     | ...        | ...        | ...     |
 
-Before submission, ensure your app:
+---
 
-* Accepts valid inputs
-* Generates accurate daily plans
-* Respects priority subject preferences
-* Is bug-free and passes UI review
+## 📌 Notes
+
+- Breaks are spaced automatically across your day.
+- Only **1 extra hour per day** is guaranteed for weak subjects.
+- Optimized schedule ensures weak subjects are not clustered.
+
+---
+
+## 🧾 Requirements
+
+- Python 3.8+
+- Streamlit
+- Pandas
+- XlsxWriter
+
+---
 
 ## 📋 Preview : 
 
@@ -90,4 +109,3 @@ Before submission, ensure your app:
 ![Preview](https://github.com/prajwalp111/AI_Study_Plan_Recommender/blob/main/preview2.png?raw=true)
 
 ---
-
