@@ -83,10 +83,11 @@ Before submission, ensure your app:
 * Respects priority subject preferences
 * Is bug-free and passes UI review
 
-## 📋 License
+## 📋 Preview : 
 
-All rights reserved by Digital Blinc. This is a certified internship project.
+![Preview](https://github.com/prajwalp111/AI_Study_Plan_Recommender/blob/main/preview1.png?raw=true)
+
+![Preview](https://github.com/prajwalp111/AI_Study_Plan_Recommender/blob/main/preview2.png?raw=true)
 
 ---
 
-Let me know if you want this as a downloadable file later once the tool is available again.
