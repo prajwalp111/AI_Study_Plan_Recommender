@@ -104,8 +104,8 @@ Exports your final plan as `study_plan.xlsx` using the format:
 
 ## 📋 Preview : 
 
-![Preview](https://github.com/prajwalp111/AI_Study_Plan_Recommender/blob/main/preview1.png?raw=true)
+![Preview](https://github.com/prajwalp111/AI_Study_Plan_Recommender/blob/main/preview1.png)
 
-![Preview](https://github.com/prajwalp111/AI_Study_Plan_Recommender/blob/main/preview2.png?raw=true)
+![Preview](https://github.com/prajwalp111/AI_Study_Plan_Recommender/blob/main/preview2.png)
 
 ---
