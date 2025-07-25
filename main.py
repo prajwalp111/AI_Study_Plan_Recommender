@@ -10,31 +10,31 @@ st.set_page_config(page_title="AI Study Planner", layout="centered")
 st.title("📚 AI-Powered Study Plan Recommender")
 st.subheader("Enter Your Study Preferences")
 
-# Phase 1: Input
 subjects = st.text_input("Enter subjects (comma-separated)", "Math, Physics, DSA")
 subject_list = [s.strip() for s in subjects.split(',') if s.strip()]
 study_hours = st.slider("Study hours per day", 1, 12, 4)
 target_date = st.date_input("Target Completion Date", datetime.date(2025, 7, 30))
 weak_subjects = st.multiselect("Weak subjects to prioritize", subject_list)
 days_off = st.multiselect("Preferred days off", ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
+num_breaks = st.slider("Number of breaks per day", 0, 5, 1)
+break_duration = st.slider("Break duration (in minutes)", 10, 60, 15)
+start_hour = st.slider("Daily start time (in 24hrs format)", 5, 18, 5)
+
 
 if st.button("Generate Study Plan"):
     errors = validate_inputs(subject_list, study_hours, target_date)
     if errors:
         st.error(" | ".join(errors))
     else:
-        st.success("✅Proceeding with scheduling...")
+        st.success("✅ Inputs are valid. Proceeding with scheduling...")
 
-        # Phase 2: Generate base schedule
-        raw_schedule = generate_schedule(subject_list, study_hours, target_date, weak_subjects, days_off)
-        st.subheader("Generated Schedule")
+        raw_schedule = generate_schedule(subject_list, study_hours, target_date,weak_subjects, days_off, num_breaks, break_duration,start_hour)
+        st.subheader("Schedule")
         st.dataframe(raw_schedule)
 
-        # Phase 3: AI Optimization
-        st.subheader("Optimized Schedule")
-        optimized = optimize_schedule(raw_schedule, weak_subjects)
-        st.dataframe(optimized)
+        # st.subheader("Phase 3: Optimized Schedule")
+        # optimized = optimize_schedule(raw_schedule, weak_subjects)
+        # st.dataframe(optimized)
 
-        # Phase 4: Export Options
         st.subheader("Download Your Plan")
-        export_schedule(optimized)
+        export_schedule(raw_schedule)
